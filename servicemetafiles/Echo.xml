@@ -1,1 +1,36 @@
-<?xml version="1.0" encoding="UTF-8"?><serviceGroup name="Echo" hashValue="1ec8ae1cf8b3c9d7acc7c55e487d38a9" successfullyAdded="true"/>
+<?xml version="1.0" encoding="UTF-8"?><serviceGroup name="Echo" hashValue="1ec8ae1cf8b3c9d7acc7c55e487d38a9" successfullyAdded="true">
+    <service name="echo" serviceDocumentation="echo" exposedAllTransports="false" serviceDeployedTime="1401193730130" successfullyAdded="true">
+        <operation name="echoStringArrays"/>
+        <operation name="echoOMElement"/>
+        <operation name="echoInt"/>
+        <operation name="throwAxisFault"/>
+        <operation name="echoString"/>
+        <bindings>
+            <binding name="echoHttpBinding">
+                <operation name="echoStringArrays"/>
+                <operation name="echoOMElement"/>
+                <operation name="echoInt"/>
+                <operation name="throwAxisFault"/>
+                <operation name="echoString"/>
+            </binding>
+            <binding name="echoSoap11Binding">
+                <operation name="echoStringArrays"/>
+                <operation name="echoOMElement"/>
+                <operation name="echoInt"/>
+                <operation name="throwAxisFault"/>
+                <operation name="echoString"/>
+            </binding>
+            <binding name="echoSoap12Binding">
+                <operation name="echoStringArrays"/>
+                <operation name="echoOMElement"/>
+                <operation name="echoInt"/>
+                <operation name="throwAxisFault"/>
+                <operation name="echoString"/>
+            </binding>
+        </bindings>
+        <policies/>
+        <parameter name="ServiceClass" locked="true">org.wso2.carbon.core.services.echo.Echo</parameter>
+        <association destinationPath="/repository/transports/https/listener" type="exposedTransports"/>
+        <association destinationPath="/repository/transports/http/listener" type="exposedTransports"/>
+    </service>
+</serviceGroup>

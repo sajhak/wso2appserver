@@ -1,1 +1,23 @@
-<?xml version="1.0" encoding="UTF-8"?><serviceGroup name="Version" hashValue="55d39cf28709884d411c7feb04c83871" successfullyAdded="true"/>
+<?xml version="1.0" encoding="UTF-8"?><serviceGroup name="Version" hashValue="55d39cf28709884d411c7feb04c83871" successfullyAdded="true">
+    <service name="Version" serviceDocumentation="Version" exposedAllTransports="false" serviceDeployedTime="1401193730558" successfullyAdded="true">
+        <operation name="getVersion"/>
+        <bindings>
+            <binding name="VersionSoap11Binding">
+                <operation name="getVersion"/>
+            </binding>
+            <binding name="VersionSoap12Binding">
+                <operation name="getVersion"/>
+            </binding>
+            <binding name="VersionHttpBinding">
+                <operation name="getVersion"/>
+            </binding>
+        </bindings>
+        <policies/>
+        <parameter name="ServiceClass" locked="false">
+        org.wso2.carbon.core.services.version.Version
+    </parameter>
+        <parameter name="modifyUserWSDLPortAddress" locked="false">true</parameter>
+        <association destinationPath="/repository/transports/https/listener" type="exposedTransports"/>
+        <association destinationPath="/repository/transports/http/listener" type="exposedTransports"/>
+    </service>
+</serviceGroup>
